@@ -1,4 +1,4 @@
- VIM 옵션
+" VIM 옵션
 syntax on						" 구문강조 사용
 set autoindent						" 자동 들여쓰기
 set smartindent						" 스마트한 들여쓰기
@@ -43,8 +43,53 @@ Plugin 'scrooloose/nerdcommenter'			" 주석
 Plugin 'taglist-plus'					" 소스파일의 클래스, 함수, 변수 정보 창
 Plugin 'bling/vim-airline'				" 상태바(Vim 사용자의 하단 상태바를 변경)
 Plugin 'vim-syntastic/syntastic'			" 구문 체크
-Plugin 'nanotech/jellybeans.vim'			" 색상 테마 변경
 Plugin 'ctrlpvim/ctrlp.vim'				" 하위 디렉토리 파일 찾기
 Plugin 'Lokaltog/vim-easymotion'			" 한 화면에서 커서 이동
 Plugin 'surround.vim'					" 소스 버전 컨트롤
 Plugin 'iwataka/ctrlproj.vim'				" 지정된 위치 프로젝트 파일 찾기
+Plugin 'Quich-Filter'					" 라인 필터링
+Plugin 'terryma/vim-multiple-cursors'			" 여러 커서에서 동시 수정
+Plugin 'mattn/emmet-vim'				" HTML, CSS 코드 단축 입력
+Plugin 'HTML.zip'					" HTML 단축 입력
+Plugin 'rking/ag.vim'					" 문자열 찾기
+Plugin 'chrisbra/NrrwRgn'				" 라인 범위 지정 후 수정
+Plugin 'MultipleSearch'					" 여러 문자열 동시에 강조
+Plugin 'majutsushi/tagbar'				" ctags 결과 표시
+Plugin 'xuhdev/SingleCompile'				" 하나의 파일 컴파일 후 실행
+Plugin 'mhinz/vim-signify'				" 버전 관리 파일 상태 표시
+Plugin 'tommcdo/vim-lion'				" 라인 정렬
+Plugin 'tpope/vim-fugitive'				" Vim에서 git 명령어 사용
+Plugin 'elzr/vim-json'					" JSON 파일 보기
+Plugin 'AutoComplPop'					" 자동 완성(Ctrl + P)를 누르지 않음
+
+call vundle#end()
+
+filetype plugin indent on				" 파일 종류에 따른 구문강조
+colorscheme jellybeans					" vi 색상 테마 설정
+
+au FileType * setl fo-=cro				" 자동 주석 기능 해제
+
+"
+" ctrlp.vim 설정
+"
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|public$\|log$\|tmp$\|vendor$',
+  \ 'file': '\v\.(exe|so|dll)$'
+\ }
+
+"
+" Tag list 설정
+"
+let Tlist_Use_Right_Window = 1
+let Tlist_Auto_Open = 0
+let Tlist_Exit_OnlyWindow = 0
+let Tlist_Inc_Winwidth = 0
+let Tlist_Ctags_Cmd = "/usr/bin/ctags"
+
+"
+" 단축키
+"
+map <F3> <C-w><C-v>
+map <F4> <C-w><C-w>
+map <F5> :NERDTreeToggle<cr>
+map <F6> :TlistToggle<cr>
