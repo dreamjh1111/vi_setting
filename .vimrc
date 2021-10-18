@@ -65,7 +65,6 @@ Plugin 'AutoComplPop'					" 자동 완성(Ctrl + P)를 누르지 않음
 call vundle#end()
 
 filetype plugin indent on				" 파일 종류에 따른 구문강조
-colorscheme jellybeans					" vi 색상 테마 설정
 
 au FileType * setl fo-=cro				" 자동 주석 기능 해제
 
