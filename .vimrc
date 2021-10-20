@@ -42,10 +42,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'				" VIM 플러그인 관리 플러그인
-Plugin 'gmarik/Vundle.vim' "required
 Plugin 'nanotech/jellybeans.vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'scrooloose/nerdcommenter'
 Plugin 'Shougo/neocomplcache.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'airblade/vim-gitgutter'				" Git으로 관리하는 파일의 변경된 부분을 확인
@@ -117,7 +114,7 @@ let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_start_level=2
 let g:indent_guides_guide_size=1
 let g:tagbar_width=25
-let g:NERDTreeWinSize=20
+let g:NERDTreeWinSize=30
 "TAB SIZE 설정
 set ts=4 sw=4 et
 colorscheme jellybeans
