@@ -113,11 +113,11 @@ set expandtab
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_start_level=2
 let g:indent_guides_guide_size=1
-let g:tagbar_width=25
-let g:NERDTreeWinSize=30
+let g:tlsit_width=50
+let g:NERDTreeWinSize=35
 "TAB SIZE 설정
 set ts=4 sw=4 et
 colorscheme jellybeans
 
 au VimEnter * NERDTreeToggle
-au VimEnter * TagbarToggle
+au VimEnter * TlistToggle
