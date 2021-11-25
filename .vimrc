@@ -43,6 +43,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'				" VIM 플러그인 관리 플러그인
 Plugin 'nanotech/jellybeans.vim'
+Plugin 'dracula/vim'
 Plugin 'Shougo/neocomplcache.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'airblade/vim-gitgutter'				" Git으로 관리하는 파일의 변경된 부분을 확인
@@ -117,7 +118,7 @@ let g:tlsit_width=50
 let g:NERDTreeWinSize=35
 "TAB SIZE 설정
 set ts=4 sw=4 et
-colorscheme jellybeans
+colorscheme dracula
 
 au VimEnter * NERDTreeToggle
 au VimEnter * TlistToggle
