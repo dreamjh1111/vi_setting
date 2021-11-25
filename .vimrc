@@ -26,14 +26,14 @@ highlight Comment term=bold cterm=bold ctermfg=4	" 코멘트 하이라이트
 set wrap
 set noswapfile
 set lbr
-set paste!              "붙여넣기 계단현상 제거
+set paste               "붙여넣기 계단현상 제거
 set title               "타이틀바에 현재 편집중인 파일 표시
 set nomodeline
 set nocompatible
 
 set ignorecase "찾기에서 대소문자 구별 하지 않음
 "set visualbell						" 키를 잘못눌렀을 때 화면 프레시
-"set mouse=a						" vim에서 마우스 사용
+set mouse=a						" vim에서 마우스 사용
 
 "
 " VIM 플러그인 설치 목록
@@ -120,5 +120,5 @@ let g:NERDTreeWinSize=35
 set ts=4 sw=4 et
 colorscheme dracula
 
-au VimEnter * NERDTreeToggle
-au VimEnter * TlistToggle
+"au VimEnter * NERDTreeToggle
+"au VimEnter * TlistToggle
